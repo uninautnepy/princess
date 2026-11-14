@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background: #000 url("images/tv.jpg") center / cover no-repeat fixed;
+}
+body.light-on{
+    background: #fff url("images/stage.jpg") center / cover no-repeat fixed;
+}
+.control{
+    position: absolute;
+    z-index: 3;
+    right: 50px;
+    bottom: 50px;
+    width: 150px;
+}
+.switch{
+    display: block;
+    width: 150px;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+.switch img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.cat-state{
+    position: absolute;
+    z-index: 1;
+    bottom: 80px;
+    left: 50%;
+    width: 200px;
+    height: auto;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+.crying-cat{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    width: min(60vw, 450px);
+    height: auto;
+    transform: translate(-30%, -50%);
+    pointer-events: none;
+}
+body.light-on .crying-cat{
+    display: none;
+}
+.switch:focus-visible{
+    outline: 3px solid #1769aa;
+    outline-offset: 4px;
+}
+.cat-stage{
+    position: fixed;
+    inset: 0;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    background: transparent;
+}
+.cat-stage[hidden]{
+    display: none;
+}
+#cat-dance{
+    display: block;
+    width: min(80vw, 800px);
+    max-height: 80vh;
+    object-fit: contain;
+    transform: translateY(100px);
+}

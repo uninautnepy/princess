@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="control">
+        <img id="bulb_img" class="cat-state" src="images/cat off.png" alt="Cat light is off">
+        <button class="switch btn" type="button" aria-label="Turn light on" aria-pressed="false">
+            <img id="switch_img" src="images/button-off.png" alt="">
+        </button>
+    </div>
+    <img class="crying-cat" src="images/crying cat.gif" alt="Crying cat">
+    <div id="cat-stage" class="cat-stage" hidden>
+        <img id="cat-dance" src="images/transparent cat.gif" alt="Dancing cat">
+    </div>
+    <audio id="cat-audio" src="audio/cat audio.mp3" loop></audio>
+    <audio id="banana-audio" src="audio/banana cry.mp3" loop></audio>
+    <script src="light.js"></script>
+</body>
+</html>
